@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Navbar } from "@/components/navbar/navbar";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -31,6 +31,7 @@ export default function RootLayout({
               <Navbar />
             </div>
             {children}
+            <SpeedInsights />
           </ThemeProvider>
         </body>
       </ClerkProvider>

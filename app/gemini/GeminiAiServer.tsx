@@ -7,7 +7,7 @@ import {
 import { SearchInputType } from "./GeminiAiClient";
 
 const MODEL_NAME = "gemini-1.0-pro";
-const API_KEY: string = process.env.NEXT_PUBLIC_GOOGLE_API_KEY!;
+const API_KEY: string = process.env.GOOGLE_API_KEY!;
 
 const GeminiAiServer = async (data: SearchInputType) => {
   const genAI = new GoogleGenerativeAI(API_KEY);
